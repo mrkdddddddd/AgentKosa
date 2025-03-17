@@ -56,6 +56,10 @@ public class Hospital {
     }
 
     public void showAllList() {
+        if (rCount == 0) {
+            System.out.println("예약된 환자가 없습니다.");
+            return;
+        }
         System.out.println("===== 전체 예약 현황 ======");
         for (int i = 0; i < rCount; i++) {
             reservations[i].showReservation();
@@ -131,6 +135,10 @@ public class Hospital {
     }
     
     public void showTreatAll() {
+        if (treatments.size() == 0) {
+            System.out.println("진료를 본 환자가 없습니다.");
+            return;
+        }
         System.out.println("===== 전체 진료 내용 =====");
         for (Treatment t : treatments) {
             t.show();
