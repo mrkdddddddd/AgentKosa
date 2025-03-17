@@ -5,6 +5,18 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Hospital hospital = new Hospital();
+
+        // 초기 데이터
+        hospital.booking(new Reservation(new Patient("홍길동")));
+        hospital.booking(new Reservation(new Patient("김철수")));
+        hospital.booking(new Reservation(new Patient("이영희")));
+        hospital.booking(new Reservation(new Patient("박민수")));
+        hospital.booking(new Reservation(new Patient("최영수")));
+        hospital.booking(new Reservation(new Patient("김민수")));
+        hospital.booking(new Reservation(new Patient("3")));
+        hospital.booking(new Reservation(new Patient("2")));
+        hospital.booking(new Reservation(new Patient("1")));
+
         
         while (true) {            
             Scanner scanner = new Scanner(System.in);
